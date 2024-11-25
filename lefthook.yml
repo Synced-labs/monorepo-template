@@ -37,12 +37,12 @@
 pre-commit:
   parallel: true
   commands:
-    lint:
-      glob: "*.{js,ts,jsx,tsx}"
-      run: bun lint
-    types:
-      glob: "*.{js,ts,jsx,tsx}"
-      run: bun check-types
-    format:
-      glob: "*.{js,ts,jsx,tsx,json,md}"
-      run: bun format
+    lint-frontend:
+      glob: "apps/frontend/**/*.{js,ts,jsx,tsx}"
+      run: cd apps/frontend && bun run lint
+    lint-backend:
+      glob: "apps/backend/**/*.{js,ts}"
+      run: cd apps/backend && deno fmt && deno lint
+    check-backend:
+      glob: "apps/backend/**/*.{js,ts}"
+      run: cd apps/backend && deno check src/main.ts
