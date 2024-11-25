@@ -1,0 +1,7 @@
+.env
+.env.*
+!.env.example
+deno.lock
+npm-debug.log*
+coverage/
+dist/
