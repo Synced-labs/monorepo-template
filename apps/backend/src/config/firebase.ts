@@ -1,5 +1,5 @@
-import { initializeApp, cert, getAuth, getFirestore } from "@/deps.ts";
-import { config } from "@/config/environment.ts";
+import { cert, getAuth, getFirestore, initializeApp } from '@/deps.ts';
+import { config } from '@/config/environment.ts';
 
 export function initializeFirebase() {
   try {
@@ -14,11 +14,11 @@ export function initializeFirebase() {
     const db = getFirestore(app);
     const auth = getAuth(app);
 
-    console.log("✅ Firebase initialized successfully");
+    console.log('✅ Firebase initialized successfully');
 
     return { db, auth, app };
   } catch (error) {
-    console.error("❌ Firebase initialization failed:", error);
+    console.error('❌ Firebase initialization failed:', error);
     throw error;
   }
 }
