@@ -33,11 +33,11 @@
     "helm",
     "typescript"
   ],
-  "author": "jagadhis",
+  "author": "Your Name",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Synced-labs/monorepo-template.git"
+    "url": "git+https://github.com/yourusername/monorepo-template.git"
   },
   "publishConfig": {
     "access": "public"

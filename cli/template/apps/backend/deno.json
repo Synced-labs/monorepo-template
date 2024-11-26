@@ -1,0 +1,35 @@
+{
+  "tasks": {
+    "dev": "deno run --allow-env --allow-read --allow-net --watch src/main.ts",
+    "start": "deno run --allow-env --allow-read --allow-net src/main.ts",
+    "lint": "deno lint",
+    "check": "deno check src/main.ts"
+  },
+  "imports": {
+    "@/": "./src/",
+    "express": "npm:express@4.18.2",
+    "cors": "npm:cors@2.8.5",
+    "zod": "npm:zod@3.22.4",
+    "firebase-admin/app": "npm:firebase-admin@12.0.0/app",
+    "firebase-admin/auth": "npm:firebase-admin@12.0.0/auth",
+    "firebase-admin/firestore": "npm:firebase-admin@12.0.0/firestore"
+  },
+  "fmt": {
+    "include": ["src/"],
+    "indentWidth": 2,
+    "lineWidth": 80,
+    "semiColons": true,
+    "singleQuote": true
+  },
+  "lint": {
+    "include": ["src/"],
+    "rules": {
+      "tags": ["recommended"]
+    }
+  },
+  "compilerOptions": {
+    "allowJs": true,
+    "lib": ["deno.window", "dom"],
+    "strict": true
+  }
+}
